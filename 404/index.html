@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Page Not Found | GHL Service Provider</title>
+  <meta name="description" content="The page you requested could not be found. Return to GHL Service Provider for GoHighLevel funnels, CRM, automation, AI chatbots, and AI voice agents." />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#060812" />
+  <link rel="canonical" href="https://ghlserviceprovider.com/404/" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    body.not-found-body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(99, 102, 241, 0.24), transparent 34%),
+        radial-gradient(circle at 86% 22%, rgba(6, 182, 212, 0.16), transparent 30%),
+        radial-gradient(circle at 52% 100%, rgba(139, 92, 246, 0.14), transparent 36%),
+        var(--clr-bg);
+    }
+
+    .not-found-shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .not-found-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.026) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.026) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 78% 58% at 50% 20%, #000, transparent 78%);
+    }
+
+    .not-found-header,
+    .not-found-main,
+    .not-found-footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .not-found-header {
+      border-bottom: 1px solid var(--clr-border);
+      background: rgba(6, 8, 18, 0.78);
+      backdrop-filter: blur(18px);
+    }
+
+    .not-found-nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .not-found-links {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      color: var(--clr-text-2);
+      font-size: 0.92rem;
+    }
+
+    .not-found-links a:hover {
+      color: var(--clr-text);
+    }
+
+    .not-found-main {
+      display: flex;
+      align-items: center;
+      padding: clamp(3rem, 8vw, 6rem) 0;
+    }
+
+    .not-found-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+    }
+
+    .not-found-grid > * {
+      min-width: 0;
+    }
+
+    .not-found-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 1rem;
+      color: var(--clr-cyan);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .not-found-eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .not-found-code {
+      display: block;
+      width: fit-content;
+      margin-bottom: 1.3rem;
+      font-family: var(--font-display);
+      font-size: clamp(5.4rem, 14vw, 10rem);
+      font-weight: 900;
+      line-height: 0.82;
+      letter-spacing: -0.04em;
+      color: transparent;
+      background: linear-gradient(135deg, #ffffff 0%, #67e8f9 38%, #8b5cf6 78%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      filter: drop-shadow(0 18px 40px rgba(99, 102, 241, 0.2));
+    }
+
+    .not-found-title {
+      max-width: 660px;
+      margin-bottom: 1rem;
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      overflow-wrap: break-word;
+    }
+
+    .not-found-copy {
+      max-width: 640px;
+      color: var(--clr-text-2);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      overflow-wrap: break-word;
+    }
+
+    .not-found-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    .not-found-card {
+      position: relative;
+      width: 100%;
+      min-width: 0;
+      padding: clamp(1.25rem, 3vw, 1.6rem);
+      border: 1px solid var(--clr-border-2);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.03)),
+        rgba(17, 21, 38, 0.78);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    .not-found-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(99, 102, 241, 0.16), transparent 42%),
+        repeating-linear-gradient(90deg, transparent 0 29px, rgba(255, 255, 255, 0.03) 29px 30px);
+      pointer-events: none;
+    }
+
+    .not-found-card > * {
+      position: relative;
+    }
+
+    .not-found-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      color: var(--clr-text-2);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .not-found-dots {
+      display: flex;
+      gap: 0.45rem;
+    }
+
+    .not-found-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .not-found-dots span:nth-child(1) { background: var(--clr-red); }
+    .not-found-dots span:nth-child(2) { background: var(--clr-amber); }
+    .not-found-dots span:nth-child(3) { background: var(--clr-green); }
+
+    .not-found-status {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      background: rgba(6, 8, 18, 0.6);
+    }
+
+    .not-found-status small,
+    .not-found-status strong {
+      display: block;
+    }
+
+    .not-found-status small {
+      color: var(--clr-text-3);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .not-found-status strong {
+      margin-top: 0.25rem;
+      color: var(--clr-text);
+      font-size: 1.4rem;
+    }
+
+    .not-found-routes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .not-found-routes a {
+      min-height: 110px;
+      padding: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      background: rgba(6, 8, 18, 0.52);
+      transition: transform var(--transition), border-color var(--transition), background var(--transition);
+    }
+
+    .not-found-routes a:hover {
+      transform: translateY(-3px);
+      border-color: rgba(99, 102, 241, 0.5);
+      background: rgba(255, 255, 255, 0.065);
+    }
+
+    .not-found-routes b,
+    .not-found-routes span {
+      display: block;
+    }
+
+    .not-found-routes b {
+      margin-bottom: 0.35rem;
+      color: var(--clr-text);
+    }
+
+    .not-found-routes span {
+      color: var(--clr-text-2);
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
+
+    .not-found-footer {
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--clr-border);
+      color: var(--clr-text-3);
+      font-size: 0.86rem;
+    }
+
+    .not-found-footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .not-found-footer a {
+      color: var(--clr-text-2);
+    }
+
+    .not-found-footer a:hover {
+      color: var(--clr-primary);
+    }
+
+    @media (max-width: 900px) {
+      .not-found-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .not-found-nav,
+      .not-found-footer .container,
+      .not-found-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .not-found-nav {
+        padding: 1rem 0;
+      }
+
+      .not-found-links {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-content: space-between;
+        gap: 0.5rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .not-found-actions .btn,
+      .not-found-card,
+      .not-found-routes {
+        width: 100%;
+        grid-template-columns: 1fr;
+      }
+
+      .not-found-title {
+        font-size: clamp(1.8rem, 10vw, 2.55rem);
+      }
+
+      .not-found-footer .container {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body class="not-found-body">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="not-found-shell">
+    <header class="not-found-header">
+      <nav class="container not-found-nav" aria-label="404 navigation">
+        <a href="../index.html" class="nav__logo" aria-label="GHL Service Provider home">
+          <span class="logo-mark">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="nfLogoGradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#6366f1"/>
+                  <stop offset="0.55" stop-color="#8b5cf6"/>
+                  <stop offset="1" stop-color="#06b6d4"/>
+                </linearGradient>
+              </defs>
+              <rect width="32" height="32" rx="9" fill="url(#nfLogoGradient)"/>
+              <rect width="32" height="32" rx="9" fill="white" opacity="0.06"/>
+              <rect x="1" y="1" width="30" height="2" rx="1" fill="white" opacity="0.18"/>
+              <path d="M8 16C8 11.582 11.582 8 16 8C18.485 8 20.712 9.052 22.263 10.737L19.435 13.565C18.626 12.592 17.384 12 16 12C13.791 12 12 13.791 12 16C12 18.209 13.791 20 16 20C17.657 20 19.083 19.009 19.732 17.6H16V14.4H24C24.131 14.921 24.2 15.453 24.2 16C24.2 20.529 20.529 24.2 16 24.2C11.471 24.2 7.8 20.529 7.8 16H8Z" fill="white"/>
+            </svg>
+          </span>
+          <span class="logo-wordmark">
+            <span class="logo-primary">GHL <em class="logo-highlight">Service</em></span>
+            <span class="logo-secondary">Provider</span>
+          </span>
+        </a>
+        <div class="not-found-links">
+          <a href="../index.html#services">Services</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="not-found-main" id="main">
+      <div class="container not-found-grid">
+        <section aria-labelledby="not-found-title">
+          <p class="not-found-eyebrow">Page not found</p>
+          <span class="not-found-code" aria-label="Error 404">404</span>
+          <h1 class="not-found-title" id="not-found-title">This route is not connected to your growth system.</h1>
+          <p class="not-found-copy">The page may have moved, the link may be outdated, or the URL may have been typed incorrectly. Use one of the paths below to get back to the GoHighLevel services you were looking for.</p>
+          <div class="not-found-actions">
+            <a href="../index.html" class="btn btn--primary">Back to Home</a>
+            <a href="../index.html#contact" class="btn btn--secondary">Book Free Consultation</a>
+          </div>
+        </section>
+
+        <aside class="not-found-card" aria-label="Helpful recovery links">
+          <div class="not-found-card-top">
+            <div class="not-found-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span>Route Check</span>
+          </div>
+          <div class="not-found-status">
+            <small>Requested page</small>
+            <strong>Not found</strong>
+          </div>
+          <div class="not-found-routes">
+            <a href="../index.html#services"><b>Services</b><span>Funnels, CRM, automations, AI chatbots, and voice agents.</span></a>
+            <a href="../index.html#pricing"><b>Pricing</b><span>Compare setup packages and choose the right starting point.</span></a>
+            <a href="../index.html#faq"><b>FAQ</b><span>Quick answers before booking your free consultation.</span></a>
+            <a href="../index.html#contact"><b>Contact</b><span>Send project details by form, email, or WhatsApp.</span></a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="not-found-footer">
+      <div class="container">
+        <p>&copy; 2026 GHL Service Provider. GoHighLevel setup, automation, CRM, funnels, and AI agents.</p>
+        <a href="https://wa.me/8801718020102">WhatsApp: +880 1718 020102</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

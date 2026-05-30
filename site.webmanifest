@@ -1,0 +1,13 @@
+{
+  "name": "GHL Service Provider",
+  "short_name": "GHL Expert",
+  "description": "Expert GoHighLevel service provider — funnels, CRM, AI chatbots & automation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060812",
+  "theme_color": "#6366f1",
+  "icons": [
+    { "src": "/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
