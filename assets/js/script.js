@@ -241,6 +241,10 @@ function initContactForm() {
       formData.set('_subject', 'New GHL Service Provider Inquiry');
       if (!formData.has('_replyto')) formData.append('_replyto', emailEl.value);
 
+      // Remove empty reCAPTCHA token on localhost to avoid Formspree rejecting it
+      const isLocalhost = ['localhost', '127.0.0.1'].includes(location.hostname);
+      if (isLocalhost) formData.delete('g-recaptcha-response');
+
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method:  'POST',
         headers: { 'Accept': 'application/json' },
@@ -249,19 +253,40 @@ function initContactForm() {
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error((data.errors || []).map(e => e.message).join(' ') || 'Submission failed. Please try again.');
+        const msg  = (data.errors || []).map(e => e.message).join(' ')
+                   || data.error
+                   || `Error ${res.status} — check Formspree dashboard & confirm activation email.`;
+        throw new Error(msg);
       }
 
-      form.innerHTML = `
-        <div class="form-success">
-          <div class="form-success__icon">
-            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/><polyline points="9,12 11,14 15,10"/>
-            </svg>
-          </div>
-          <h3>Message Sent!</h3>
-          <p>Thanks for reaching out! I'll review your details and get back to you within a few hours.</p>
-        </div>`;
+      // Show success notification bar below the button
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
+      form.reset();
+      if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+
+      const existing = form.querySelector('.form-notify');
+      if (existing) existing.remove();
+
+      const notify = document.createElement('div');
+      notify.className = 'form-notify form-notify--success';
+      notify.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="9,12 11,14 15,10"/></svg>
+        <span><strong>Message Sent!</strong> I'll get back to you within a few hours.</span>
+        <button class="form-notify__close" aria-label="Close">×</button>`;
+      form.appendChild(notify);
+
+      requestAnimationFrame(() => notify.classList.add('form-notify--show'));
+
+      notify.querySelector('.form-notify__close').addEventListener('click', () => {
+        notify.classList.remove('form-notify--show');
+        setTimeout(() => notify.remove(), 350);
+      });
+
+      setTimeout(() => {
+        notify.classList.remove('form-notify--show');
+        setTimeout(() => notify.remove(), 350);
+      }, 6000);
 
     } catch (err) {
       submitBtn.classList.remove('loading');
