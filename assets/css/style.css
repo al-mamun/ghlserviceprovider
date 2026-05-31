@@ -411,6 +411,9 @@ svg { flex-shrink: 0; }
 .nav__toggle.active span:nth-child(2) { opacity: 0; }
 .nav__toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Scroll spy active state — defined in CSS, not injected by JS */
+.nav__link--active { color: var(--clr-text) !important; }
+
 /* ====== HERO ====== */
 .hero {
   min-height: calc(100vh - var(--header-h));
