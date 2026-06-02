@@ -2551,9 +2551,9 @@ svg { flex-shrink: 0; }
   .final-cta__buttons { flex-direction: column; align-items: center; }
   .hero__ctas { flex-direction: column; }
   .hero__ctas .btn { width: 100%; justify-content: center; }
-  .floating-actions { bottom: 7rem; right: 1rem; }
+  .floating-actions { bottom: 10rem; right: 1rem; }
   .fab { width: 48px; height: 48px; }
-  .back-to-top { bottom: 7rem; right: 1rem; width: 42px; height: 42px; }
+  .back-to-top { bottom: 5.5rem; right: 1rem; width: 42px; height: 42px; }
 }
 
 /* Small mobile */
