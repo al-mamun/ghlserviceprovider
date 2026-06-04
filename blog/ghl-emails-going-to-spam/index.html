@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoHighLevel Emails Going to Spam: Causes and How to Fix It | GHL Service Provider</title>
+  <meta name="description" content="GoHighLevel emails landing in spam is one of the most common problems in GHL. Here's exactly why it happens and how to fix it — SPF, DKIM, DMARC, sending domain setup and more."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://ghlserviceprovider.com/blog/ghl-emails-going-to-spam/"/>
+  <meta property="og:title" content="GoHighLevel Emails Going to Spam: How to Fix It"/>
+  <meta property="og:url" content="https://ghlserviceprovider.com/blog/ghl-emails-going-to-spam/"/>
+  <meta property="og:image" content="https://ghlserviceprovider.com/assets/images/og-image.jpg"/>
+  <meta property="og:type" content="article"/>
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=optional" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <link rel="stylesheet" href="../../assets/css/style.css"/>
+  <link rel="stylesheet" href="../../assets/css/blog.css"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"GoHighLevel Emails Going to Spam: Causes and How to Fix It","author":{"@type":"Person","name":"GHL Service Provider"},"datePublished":"2026-06-02","mainEntityOfPage":"https://ghlserviceprovider.com/blog/ghl-emails-going-to-spam/"}</script>
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="/" class="nav__logo">
+        <span class="logo-mark"><svg width="36" height="36" viewBox="0 0 32 32" fill="none"><defs><linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1"/><stop offset="0.55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#lg1)"/><path d="M8 16C8 11.582 11.582 8 16 8C18.485 8 20.712 9.052 22.263 10.737L19.435 13.565C18.626 12.592 17.384 12 16 12C13.791 12 12 13.791 12 16C12 18.209 13.791 20 16 20C17.657 20 19.083 19.009 19.732 17.6H16V14.4H24C24.131 14.921 24.2 15.453 24.2 16C24.2 20.529 20.529 24.2 16 24.2C11.471 24.2 7.8 20.529 7.8 16H8Z" fill="white"/></svg></span>
+        <span class="logo-wordmark"><span class="logo-primary">GHL <em class="logo-highlight">Service</em></span><span class="logo-secondary">Provider</span></span>
+      </a>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="/#services" class="nav__link">Services</a></li>
+        <li><a href="/#pricing" class="nav__link">Pricing</a></li>
+        <li><a href="/blog/" class="nav__link nav__link--active">Blog</a></li>
+        <li><a href="/case-studies/" class="nav__link">Case Studies</a></li>
+        <li><a href="/#faq" class="nav__link">FAQ</a></li>
+        <li><a href="/#contact" class="nav__link">Contact</a></li>
+        <li class="nav__mobile-ctas"><a href="/#contact" class="btn btn--ghost btn--full">Get Demo</a><a href="/#contact" class="btn btn--primary btn--full">Book Consultation</a></li>
+      </ul>
+      <div class="nav__actions"><a href="/#contact" class="btn btn--ghost">Get Demo</a><a href="/#contact" class="btn btn--primary">Book Consultation</a></div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post-layout">
+      <header class="post-header">
+        <div class="container post-header__container">
+          <div class="breadcrumb"><a href="/">Home</a><span>→</span><a href="/blog/">Blog</a><span>→</span><span>Email Deliverability</span></div>
+          <div class="post-category">Troubleshooting</div>
+          <h1 class="post-title">GoHighLevel Emails Going to Spam — Why It Happens and How to Fix It</h1>
+          <div class="post-meta"><span>By GHL Service Provider</span><span>·</span><time datetime="2026-06-02">June 2, 2026</time><span>·</span><span>8 min read</span></div>
+          <p class="post-intro">This is the single most common issue I see when auditing GoHighLevel accounts. Emails get set up, sequences get built, and then nobody notices for weeks that every single message is landing in the spam folder. By then, hundreds of leads have been silently ignored. Here's the complete fix.</p>
+        </div>
+      </header>
+      <div class="post-content">
+        <div class="container post-content__container">
+          <div class="post-body">
+
+            <div class="post-toc">
+              <strong>In This Guide</strong>
+              <ol>
+                <li><a href="#why">Why GHL Emails Go to Spam</a></li>
+                <li><a href="#spf">Fix SPF Records</a></li>
+                <li><a href="#dkim">Set Up DKIM</a></li>
+                <li><a href="#dmarc">Add DMARC</a></li>
+                <li><a href="#domain">Use a Custom Sending Domain</a></li>
+                <li><a href="#content">Fix Your Email Content</a></li>
+                <li><a href="#test">Test Before Sending</a></li>
+              </ol>
+            </div>
+
+            <h2 id="why">Why GoHighLevel Emails End Up in Spam</h2>
+            <p>Before you can fix the problem, you need to understand what's causing it. Email spam filters look at dozens of signals to decide whether your email belongs in the inbox or the junk folder. When GHL emails fail, it's almost always one of these reasons:</p>
+            <ul>
+              <li><strong>Using GHL's default sending domain</strong> — Sending from a shared GHL domain means you're sharing reputation with thousands of other users, many of whom send spammy content</li>
+              <li><strong>Missing SPF record</strong> — Email providers can't verify you're authorised to send from your domain</li>
+              <li><strong>No DKIM signature</strong> — Emails aren't cryptographically signed, which is a major red flag for spam filters</li>
+              <li><strong>No DMARC policy</strong> — Tells receiving servers what to do with emails that fail authentication</li>
+              <li><strong>Spammy content</strong> — Words like "FREE", "LIMITED TIME", excessive capitals or too many links</li>
+              <li><strong>No unsubscribe link</strong> — Required by law and heavily flagged by spam filters without it</li>
+            </ul>
+
+            <div class="post-callout post-callout--warning">
+              <strong>⚠️ Important:</strong> If you've been sending emails from GHL without proper authentication, some of your domain's sending reputation may already be damaged. Fix the technical issues first, then slowly warm up your sending volume.
+            </div>
+
+            <h2 id="spf">Step 1: Fix Your SPF Record</h2>
+            <p>SPF (Sender Policy Framework) tells receiving email servers which servers are authorised to send email on behalf of your domain. Without it, your emails look suspicious from the start.</p>
+            <p>Log into your domain registrar's DNS settings and look for an existing SPF record (it starts with <code>v=spf1</code>). If you're using Mailgun with GHL, your SPF record should look like this:</p>
+            <div class="post-code"><code>v=spf1 include:mailgun.org ~all</code></div>
+            <p>If you're using SendGrid:</p>
+            <div class="post-code"><code>v=spf1 include:sendgrid.net ~all</code></div>
+            <p>If you already have an SPF record with other services, don't create a new one — add the include to your existing record. You can only have one SPF record per domain.</p>
+
+            <h2 id="dkim">Step 2: Set Up DKIM</h2>
+            <p>DKIM (DomainKeys Identified Mail) adds a digital signature to your emails that proves they genuinely came from your domain and haven't been tampered with in transit.</p>
+            <p>In GoHighLevel, go to <strong>Settings → Email Services → SMTP</strong>. When you connect Mailgun or SendGrid, they'll provide you with DKIM DNS records to add to your domain. These look like long TXT records with random-looking strings.</p>
+            <p>Add these to your DNS and wait 15–30 minutes for them to propagate. You can verify they're working using <strong>MXToolbox</strong> — search for "DKIM lookup" and test your domain.</p>
+
+            <h2 id="dmarc">Step 3: Add a DMARC Record</h2>
+            <p>DMARC tells receiving email servers what to do when an email fails SPF or DKIM checks. Start with a monitoring-only policy while you're setting things up:</p>
+            <div class="post-code"><code>v=DMARC1; p=none; rua=mailto:dmarc@yourdomain.com</code></div>
+            <p>Add this as a TXT record with the name <code>_dmarc.yourdomain.com</code>. Once you've confirmed everything is working correctly, you can tighten the policy to <code>p=quarantine</code> or <code>p=reject</code>.</p>
+
+            <h2 id="domain">Step 4: Set Up a Custom Sending Domain in GHL</h2>
+            <p>This is the most impactful single change you can make. In GHL, go to <strong>Settings → Domains → Add Sending Domain</strong>. Add a subdomain like <code>mail.yourdomain.com</code> or <code>send.yourdomain.com</code>.</p>
+            <p>GHL will show you a set of DNS records to add. Add all of them to your domain registrar. Once verified, change your email sender address to use this domain.</p>
+            <p>Why does this matter so much? Because you're now sending from your own dedicated domain reputation rather than sharing a reputation with thousands of other GHL users. Your sending history is yours alone.</p>
+
+            <h2 id="content">Step 5: Clean Up Your Email Content</h2>
+            <p>Even with perfect authentication, spammy content can still get you filtered. Check your email templates for:</p>
+            <ul>
+              <li>Words like FREE, GUARANTEED, URGENT, LIMITED TIME in capitals</li>
+              <li>More than 2–3 links in a single email</li>
+              <li>Image-heavy emails with very little text</li>
+              <li>Missing unsubscribe link (legally required)</li>
+              <li>Subject lines with excessive punctuation (!!! ???)</li>
+            </ul>
+            <p>Write your automated emails like you'd write a personal one. Plain text often outperforms heavily designed HTML emails for deliverability.</p>
+
+            <h2 id="test">Step 6: Test Before Sending</h2>
+            <p>Before reactivating any sequences, test your setup using <strong>Mail-Tester.com</strong>. Send a test email to the address they provide and you'll get a detailed score with specific issues to fix. Aim for a score of 9 or above before sending to your list.</p>
+            <p>Also use <strong>Google Postmaster Tools</strong> if you send significant volume to Gmail addresses. It shows your domain reputation directly from Google's perspective.</p>
+
+            <div class="post-callout post-callout--success">
+              <strong>✅ After fixing all of this:</strong> Most clients see their open rates jump from 8–12% to 30–45% within a few weeks of sending. The emails were always good — they just weren't reaching anyone.
+            </div>
+
+            <hr class="post-divider"/>
+            <div class="post-cta">
+              <h3>Having Trouble With This?</h3>
+              <p>Email deliverability setup can be genuinely fiddly — DNS records, propagation delays, multiple platforms to configure. If you'd rather have it done correctly in one go, that's exactly what I do. Book a free consultation and I'll audit your current setup.</p>
+              <a href="/#contact" class="btn btn--primary btn--lg">Book Free Consultation →</a>
+            </div>
+          </div>
+
+          <aside class="post-sidebar">
+            <div class="sidebar-card sidebar-card--highlight">
+              <h3>Get It Fixed Properly</h3>
+              <p>Email deliverability is technical. I'll configure your SPF, DKIM, DMARC and custom sending domain — all correctly, first time.</p>
+              <a href="/#contact" class="btn btn--primary btn--full">Book Free Demo</a>
+            </div>
+            <div class="sidebar-card">
+              <h3>Related Articles</h3>
+              <ul class="sidebar-links">
+                <li><a href="/blog/ghl-complete-setup-guide/">Complete GHL Setup Guide</a></li>
+                <li><a href="/blog/ghl-workflow-not-triggering/">GHL Workflow Not Triggering</a></li>
+                <li><a href="/blog/why-your-business-needs-automation/">Why You Need Automation</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer__bottom" style="border-top:none;padding-top:0"><p class="footer__copy">© <span id="footerYear"></span> GHL Service Provider. All rights reserved.</p></div></div></footer>
+  <script src="../../assets/js/script.js?v=20260604-1" defer></script>
+  <script>document.getElementById('footerYear').textContent=new Date().getFullYear();</script>
+</body>
+</html>

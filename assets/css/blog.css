@@ -86,6 +86,15 @@
 .bh-stat__label { font-size: 0.78rem; color: var(--clr-text-3); font-weight: 500; }
 .bh-stat__divider { width: 1px; height: 40px; background: var(--clr-border); }
 
+/* Hero inline tags */
+.blog-hero__tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+.blog-hero { padding: 5rem 0 4rem; }
+
 /* ── Category Pills ── */
 .blog-categories {
   background: var(--clr-bg-2);
