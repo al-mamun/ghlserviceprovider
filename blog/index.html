@@ -7,8 +7,8 @@
   <meta name="description" content="Expert GoHighLevel tips, setup guides, automation strategies and business growth insights from a certified GHL specialist."/>
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://ghlserviceprovider.com/blog/"/>
-  <meta property="og:title" content="Blog — GoHighLevel Tips & Guides | GHL Service Provider"/>
-  <meta property="og:description" content="Expert GoHighLevel tips, setup guides and automation strategies."/>
+  <meta property="og:title" content="Blog — GoHighLevel Tips & Automation Guides"/>
+  <meta property="og:description" content="Practical GoHighLevel strategies to grow your business — from setup guides to advanced automation."/>
   <meta property="og:url" content="https://ghlserviceprovider.com/blog/"/>
   <meta property="og:image" content="https://ghlserviceprovider.com/assets/images/og-image.jpg"/>
   <meta property="og:type" content="website"/>
@@ -18,17 +18,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=optional" rel="stylesheet" media="print" onload="this.media='all'"/>
   <link rel="stylesheet" href="../assets/css/style.css"/>
   <link rel="stylesheet" href="../assets/css/blog.css"/>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Blog","name":"GHL Service Provider Blog","url":"https://ghlserviceprovider.com/blog/","description":"Expert GoHighLevel tips, guides and automation strategies"}
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"GHL Service Provider Blog","url":"https://ghlserviceprovider.com/blog/","description":"Expert GoHighLevel tips, guides and automation strategies"}</script>
 </head>
 <body>
 
   <header class="header" id="header">
     <nav class="nav container" aria-label="Main navigation">
-      <a href="/" class="nav__logo" aria-label="GHL Service Provider Home">
+      <a href="/" class="nav__logo">
         <span class="logo-mark">
-          <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
             <defs><linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1"/><stop offset="0.55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
             <rect width="32" height="32" rx="9" fill="url(#lg1)"/>
             <rect width="32" height="32" rx="9" fill="white" opacity="0.06"/>
@@ -46,6 +44,7 @@
         <li><a href="/#pricing" class="nav__link">Pricing</a></li>
         <li><a href="/blog/" class="nav__link nav__link--active">Blog</a></li>
         <li><a href="/case-studies/" class="nav__link">Case Studies</a></li>
+        <li><a href="/#faq" class="nav__link">FAQ</a></li>
         <li><a href="/#contact" class="nav__link">Contact</a></li>
         <li class="nav__mobile-ctas">
           <a href="/#contact" class="btn btn--ghost btn--full">Get Demo</a>
@@ -63,120 +62,180 @@
   </header>
 
   <main>
-    <!-- Page Header -->
-    <section class="page-hero">
-      <div class="container page-hero__container">
-        <div class="breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span>→</span>
-          <span>Blog</span>
+
+    <!-- ── Premium Blog Hero ── -->
+    <section class="blog-hero">
+      <div class="blog-hero__bg">
+        <div class="blog-hero__orb blog-hero__orb--1"></div>
+        <div class="blog-hero__orb blog-hero__orb--2"></div>
+        <div class="blog-hero__grid"></div>
+      </div>
+      <div class="container blog-hero__container">
+        <div class="blog-hero__content">
+          <div class="blog-hero__eyebrow">
+            <span class="eyebrow-dot"></span>
+            Knowledge Base &amp; Insights
+          </div>
+          <h1 class="blog-hero__title">
+            GoHighLevel Tips,
+            <span class="gradient-text">Guides &amp; Strategies</span>
+          </h1>
+          <p class="blog-hero__desc">Practical, no-fluff advice on GoHighLevel setup, automation and business growth — written by someone who builds these systems every day.</p>
+          <div class="blog-hero__stats">
+            <div class="bh-stat"><span class="bh-stat__num">5</span><span class="bh-stat__label">Articles</span></div>
+            <div class="bh-stat__divider"></div>
+            <div class="bh-stat"><span class="bh-stat__num">200+</span><span class="bh-stat__label">GHL Systems Built</span></div>
+            <div class="bh-stat__divider"></div>
+            <div class="bh-stat"><span class="bh-stat__num">5 min</span><span class="bh-stat__label">Avg. Read Time</span></div>
+          </div>
         </div>
-        <span class="section-eyebrow">Knowledge Base</span>
-        <h1 class="page-hero__title">GoHighLevel Tips, <span class="gradient-text">Guides & Insights</span></h1>
-        <p class="page-hero__desc">Practical strategies to grow your business with GoHighLevel — from setup guides to advanced automation workflows.</p>
       </div>
     </section>
 
-    <!-- Blog Posts Grid -->
-    <section class="section blog-listing">
+    <!-- ── Category Pills ── -->
+    <div class="blog-categories">
+      <div class="container blog-categories__inner">
+        <button class="cat-pill cat-pill--active">All Posts</button>
+        <button class="cat-pill">Setup Guides</button>
+        <button class="cat-pill">AI Automation</button>
+        <button class="cat-pill">Lead Recovery</button>
+        <button class="cat-pill">Business Growth</button>
+        <button class="cat-pill">Reputation</button>
+      </div>
+    </div>
+
+    <!-- ── Featured Post ── -->
+    <section class="blog-featured">
       <div class="container">
-        <div class="blog-grid">
+        <article class="featured-card">
+          <a href="/blog/why-your-business-needs-automation/" class="featured-card__image-wrap">
+            <div class="featured-card__image"></div>
+            <div class="featured-card__overlay">
+              <span class="featured-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Featured
+              </span>
+            </div>
+          </a>
+          <div class="featured-card__body">
+            <div class="featured-card__meta">
+              <span class="featured-cat">Business Growth</span>
+              <span class="featured-dot">·</span>
+              <time datetime="2026-05-10">May 10, 2026</time>
+              <span class="featured-dot">·</span>
+              <span>7 min read</span>
+            </div>
+            <h2 class="featured-card__title">
+              <a href="/blog/why-your-business-needs-automation/">Why Your Business Is Losing Money Without Automation — And How to Fix It</a>
+            </h2>
+            <p class="featured-card__excerpt">If your team is manually following up with leads, sending reminders by hand and asking customers for reviews one by one — you're not just wasting time. You're actively losing money every single day. Here's what that's actually costing you and how to fix it permanently.</p>
+            <div class="featured-card__footer">
+              <a href="/blog/why-your-business-needs-automation/" class="btn btn--primary">Read Article →</a>
+              <div class="featured-card__reading">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                7 min read
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── All Posts Grid ── -->
+    <section class="blog-grid-section">
+      <div class="container">
+        <div class="blog-grid-header">
+          <h2 class="blog-grid-title">All Articles</h2>
+          <span class="blog-grid-count">5 posts</span>
+        </div>
+
+        <div class="premium-blog-grid">
 
           <!-- Post 1 -->
-          <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
-            <a href="/blog/ghl-complete-setup-guide/" class="blog-card__image-wrap" aria-hidden="true" tabindex="-1">
-              <div class="blog-card__image blog-card__image--1"></div>
-              <span class="blog-card__category">Setup Guide</span>
+          <article class="premium-card">
+            <a href="/blog/ghl-complete-setup-guide/" class="premium-card__img-wrap">
+              <div class="premium-card__img" style="background:linear-gradient(135deg,#1e1b4b,#312e81,#4338ca)"></div>
+              <span class="premium-card__cat">Setup Guide</span>
             </a>
-            <div class="blog-card__body">
-              <div class="blog-card__meta">
-                <time datetime="2026-06-01" itemprop="datePublished">June 1, 2026</time>
-                <span>·</span>
-                <span>8 min read</span>
+            <div class="premium-card__body">
+              <div class="premium-card__meta">
+                <time datetime="2026-06-01">Jun 1, 2026</time>
+                <span>·</span><span>8 min</span>
               </div>
-              <h2 class="blog-card__title" itemprop="headline">
+              <h3 class="premium-card__title">
                 <a href="/blog/ghl-complete-setup-guide/">How to Set Up GoHighLevel for Your Business in 2026 — Complete Guide</a>
-              </h2>
-              <p class="blog-card__excerpt" itemprop="description">A step-by-step walkthrough of setting up your full GoHighLevel account from scratch — domain, SMTP, CRM, pipelines, calendars and automations.</p>
-              <a href="/blog/ghl-complete-setup-guide/" class="blog-card__link">Read Article →</a>
+              </h3>
+              <p class="premium-card__desc">Step-by-step walkthrough from domain to full automation system — domain, SMTP, CRM, pipelines, calendars and workflows.</p>
+              <a href="/blog/ghl-complete-setup-guide/" class="premium-card__link">
+                Read Guide
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+              </a>
             </div>
           </article>
 
           <!-- Post 2 -->
-          <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
-            <a href="/blog/ghl-ai-chatbot-setup/" class="blog-card__image-wrap" aria-hidden="true" tabindex="-1">
-              <div class="blog-card__image blog-card__image--2"></div>
-              <span class="blog-card__category">AI Automation</span>
+          <article class="premium-card">
+            <a href="/blog/ghl-ai-chatbot-setup/" class="premium-card__img-wrap">
+              <div class="premium-card__img" style="background:linear-gradient(135deg,#0f172a,#1e3a5f,#1d4ed8)"></div>
+              <span class="premium-card__cat premium-card__cat--cyan">AI Automation</span>
             </a>
-            <div class="blog-card__body">
-              <div class="blog-card__meta">
-                <time datetime="2026-05-25" itemprop="datePublished">May 25, 2026</time>
-                <span>·</span>
-                <span>6 min read</span>
+            <div class="premium-card__body">
+              <div class="premium-card__meta">
+                <time datetime="2026-05-25">May 25, 2026</time>
+                <span>·</span><span>6 min</span>
               </div>
-              <h2 class="blog-card__title" itemprop="headline">
-                <a href="/blog/ghl-ai-chatbot-setup/">GoHighLevel AI Chatbots: How to Build One That Actually Converts</a>
-              </h2>
-              <p class="blog-card__excerpt" itemprop="description">Learn how to build a GoHighLevel AI chatbot that qualifies leads, answers FAQs and books appointments — 24 hours a day, 7 days a week.</p>
-              <a href="/blog/ghl-ai-chatbot-setup/" class="blog-card__link">Read Article →</a>
+              <h3 class="premium-card__title">
+                <a href="/blog/ghl-ai-chatbot-setup/">GoHighLevel AI Chatbots: Build One That Actually Converts Leads</a>
+              </h3>
+              <p class="premium-card__desc">Most GHL chatbots are set up wrong. Here's how to build one that genuinely qualifies leads and books appointments 24/7.</p>
+              <a href="/blog/ghl-ai-chatbot-setup/" class="premium-card__link">
+                Read Guide
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+              </a>
             </div>
           </article>
 
           <!-- Post 3 -->
-          <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
-            <a href="/blog/missed-call-text-back/" class="blog-card__image-wrap" aria-hidden="true" tabindex="-1">
-              <div class="blog-card__image blog-card__image--3"></div>
-              <span class="blog-card__category">Lead Recovery</span>
+          <article class="premium-card">
+            <a href="/blog/missed-call-text-back/" class="premium-card__img-wrap">
+              <div class="premium-card__img" style="background:linear-gradient(135deg,#042f2e,#065f46,#059669)"></div>
+              <span class="premium-card__cat premium-card__cat--green">Lead Recovery</span>
             </a>
-            <div class="blog-card__body">
-              <div class="blog-card__meta">
-                <time datetime="2026-05-18" itemprop="datePublished">May 18, 2026</time>
-                <span>·</span>
-                <span>5 min read</span>
+            <div class="premium-card__body">
+              <div class="premium-card__meta">
+                <time datetime="2026-05-18">May 18, 2026</time>
+                <span>·</span><span>5 min</span>
               </div>
-              <h2 class="blog-card__title" itemprop="headline">
-                <a href="/blog/missed-call-text-back/">Missed Call Text Back: How to Recover Every Lost Lead Automatically</a>
-              </h2>
-              <p class="blog-card__excerpt" itemprop="description">Every missed call is a missed sale. Here's exactly how to set up GoHighLevel's missed call text back feature and stop losing leads forever.</p>
-              <a href="/blog/missed-call-text-back/" class="blog-card__link">Read Article →</a>
+              <h3 class="premium-card__title">
+                <a href="/blog/missed-call-text-back/">Missed Call Text Back: Recover Every Lost Lead Automatically</a>
+              </h3>
+              <p class="premium-card__desc">Every missed call is a missed sale. Set up GHL's missed call text back and stop losing leads to competitors forever.</p>
+              <a href="/blog/missed-call-text-back/" class="premium-card__link">
+                Read Guide
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+              </a>
             </div>
           </article>
 
           <!-- Post 4 -->
-          <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
-            <a href="/blog/why-your-business-needs-automation/" class="blog-card__image-wrap">
-              <div class="blog-card__image" style="background:linear-gradient(135deg,#1c1033 0%,#3b0764 40%,#7c3aed 100%)"></div>
-              <span class="blog-card__category">Business Growth</span>
+          <article class="premium-card">
+            <a href="/blog/ghl-google-review-automation/" class="premium-card__img-wrap">
+              <div class="premium-card__img" style="background:linear-gradient(135deg,#0c1a2e,#14532d,#16a34a)"></div>
+              <span class="premium-card__cat premium-card__cat--amber">Reputation</span>
             </a>
-            <div class="blog-card__body">
-              <div class="blog-card__meta">
-                <time datetime="2026-05-10" itemprop="datePublished">May 10, 2026</time>
-                <span>·</span><span>7 min read</span>
+            <div class="premium-card__body">
+              <div class="premium-card__meta">
+                <time datetime="2026-05-05">May 5, 2026</time>
+                <span>·</span><span>5 min</span>
               </div>
-              <h2 class="blog-card__title" itemprop="headline">
-                <a href="/blog/why-your-business-needs-automation/">Why Your Business Is Losing Money Without Automation — And How to Fix It</a>
-              </h2>
-              <p class="blog-card__excerpt">If your team still manually follows up with leads and sends reminders by hand, you're losing money every single day. Here's the honest truth about what that costs.</p>
-              <a href="/blog/why-your-business-needs-automation/" class="blog-card__link">Read Article →</a>
-            </div>
-          </article>
-
-          <!-- Post 5 -->
-          <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
-            <a href="/blog/ghl-google-review-automation/" class="blog-card__image-wrap">
-              <div class="blog-card__image" style="background:linear-gradient(135deg,#0c1a2e 0%,#14532d 40%,#16a34a 100%)"></div>
-              <span class="blog-card__category">Reputation</span>
-            </a>
-            <div class="blog-card__body">
-              <div class="blog-card__meta">
-                <time datetime="2026-05-05" itemprop="datePublished">May 5, 2026</time>
-                <span>·</span><span>5 min read</span>
-              </div>
-              <h2 class="blog-card__title" itemprop="headline">
-                <a href="/blog/ghl-google-review-automation/">How to Get 5-Star Google Reviews on Autopilot With GoHighLevel</a>
-              </h2>
-              <p class="blog-card__excerpt">Google reviews are the most powerful free marketing tool for local businesses. Here's how to generate a steady stream of 5-star reviews — without asking anyone manually.</p>
-              <a href="/blog/ghl-google-review-automation/" class="blog-card__link">Read Article →</a>
+              <h3 class="premium-card__title">
+                <a href="/blog/ghl-google-review-automation/">Get 5-Star Google Reviews on Autopilot With GoHighLevel</a>
+              </h3>
+              <p class="premium-card__desc">The most powerful free marketing tool for local businesses — here's how to generate a steady stream of 5-star reviews automatically.</p>
+              <a href="/blog/ghl-google-review-automation/" class="premium-card__link">
+                Read Guide
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+              </a>
             </div>
           </article>
 
@@ -184,19 +243,31 @@
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section blog-cta">
-      <div class="container blog-cta__inner">
-        <h2>Ready to Build Your GoHighLevel System?</h2>
-        <p>Stop reading and start growing. Book a free demo and see exactly what we'll build for your business.</p>
-        <a href="/#contact" class="btn btn--primary btn--xl">Book Free Consultation →</a>
+    <!-- ── CTA Banner ── -->
+    <section class="blog-cta-banner">
+      <div class="container blog-cta-banner__inner">
+        <div class="blog-cta-banner__content">
+          <span class="section-eyebrow">Ready to Grow?</span>
+          <h2>Stop Reading. Start Automating.</h2>
+          <p>Everything in this blog — I build it for businesses like yours. Book a free consultation and see exactly what your system would look like before you pay a cent.</p>
+          <div class="blog-cta-banner__actions">
+            <a href="/#contact" class="btn btn--primary btn--xl">Book Free Consultation</a>
+            <a href="/case-studies/" class="btn btn--outline btn--xl">See Real Results →</a>
+          </div>
+          <div class="blog-cta-banner__trust">
+            <span>✓ Demo First</span>
+            <span>✓ Pay After Satisfaction</span>
+            <span>✓ 50% Launch Offer</span>
+          </div>
+        </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
     <div class="container footer__container">
-      <div class="footer__bottom" style="border-top:none; padding-top:0">
+      <div class="footer__bottom" style="border-top:none;padding-top:0">
         <p class="footer__copy">© <span id="footerYear"></span> GHL Service Provider. All rights reserved.</p>
         <p class="footer__disclaimer">GoHighLevel® is a registered trademark of HighLevel Inc.</p>
       </div>
