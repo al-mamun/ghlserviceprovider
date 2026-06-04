@@ -72,18 +72,14 @@
     />
 
     <!-- ═══ PERFORMANCE HINTS ═══ -->
-    <!-- Fonts loaded asynchronously — zero render blocking -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script>
-      // Load Google Fonts after page renders — no render blocking
-      (function(){
-        var l=document.createElement('link');
-        l.rel='stylesheet';
-        l.href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap';
-        document.head.appendChild(l);
-      })();
-    </script>
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <!-- font-display=optional prevents CLS by not swapping if font isn't ready -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=optional"
+      rel="stylesheet"
+    />
 
     <!-- ═══ FAVICONS ═══ -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -112,8 +108,26 @@
       gtag('config', 'G-2CQ9N6ERFH');
     </script>
 
-    <!-- reCAPTCHA v2 -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- reCAPTCHA v2 — loaded lazily when contact section is visible -->
+    <script>
+      (function(){
+        var loaded=false;
+        var observer=new IntersectionObserver(function(entries){
+          if(entries[0].isIntersecting && !loaded){
+            loaded=true;
+            var s=document.createElement('script');
+            s.src='https://www.google.com/recaptcha/api.js';
+            s.async=true; s.defer=true;
+            document.head.appendChild(s);
+            observer.disconnect();
+          }
+        },{rootMargin:'200px'});
+        document.addEventListener('DOMContentLoaded',function(){
+          var contact=document.getElementById('contact');
+          if(contact) observer.observe(contact);
+        });
+      })();
+    </script>
 
     <!-- Critical above-fold CSS inlined to eliminate render blocking -->
     <style>
@@ -129,9 +143,9 @@
       [data-animate].animated{opacity:1;transform:none}
       .gradient-text{background:linear-gradient(135deg,#6366f1,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     </style>
-    <!-- Full CSS — loaded async after critical inline CSS renders the page -->
-    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="assets/css/style.css" /></noscript>
+    <!-- Full CSS -->
+    <link rel="preload" href="assets/css/style.css" as="style" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <!-- JSON-LD: WebSite + SearchAction -->
     <script type="application/ld+json">
       {
@@ -366,32 +380,9 @@
       }
     </script>
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-NDPKV3H2");
-    </script>
-    <!-- End Google Tag Manager -->
+    <!-- GTM removed — using GA4 direct (G-2CQ9N6ERFH) instead to reduce JS payload -->
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NDPKV3H2"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <!-- Skip to content (accessibility) -->
     <a href="#home" class="skip-link">Skip to main content</a>
 
