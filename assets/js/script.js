@@ -69,7 +69,8 @@ function initOfferBanner() {
   if (!banner || !closeBtn) return;
 
   closeBtn.addEventListener('click', () => {
-    banner.style.cssText += ';transition:max-height .35s ease,opacity .35s ease,padding .35s ease;overflow:hidden;max-height:' + banner.offsetHeight + 'px';
+    const h = banner.getBoundingClientRect().height; // read before write
+    banner.style.cssText += ';transition:max-height .35s ease,opacity .35s ease,padding .35s ease;overflow:hidden;max-height:' + h + 'px';
     requestAnimationFrame(() => requestAnimationFrame(() => {
       banner.style.maxHeight = '0';
       banner.style.opacity   = '0';
