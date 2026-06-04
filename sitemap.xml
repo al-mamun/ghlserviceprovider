@@ -157,4 +157,32 @@
     <priority>0.85</priority>
   </url>
 
+  <url>
+    <loc>https://ghlserviceprovider.com/case-studies/gym-fitness-studio/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://ghlserviceprovider.com/case-studies/real-estate-agent-automation/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://ghlserviceprovider.com/case-studies/contractor-lead-generation/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://ghlserviceprovider.com/case-studies/coaching-business-automation/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
 </urlset>
