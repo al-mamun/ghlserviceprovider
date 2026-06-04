@@ -72,20 +72,18 @@
     />
 
     <!-- ═══ PERFORMANCE HINTS ═══ -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Fonts loaded asynchronously — zero render blocking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <!-- Reduced font weights — fewer variants = faster load -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
-    </noscript>
+    <script>
+      // Load Google Fonts after page renders — no render blocking
+      (function(){
+        var l=document.createElement('link');
+        l.rel='stylesheet';
+        l.href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap';
+        document.head.appendChild(l);
+      })();
+    </script>
 
     <!-- ═══ FAVICONS ═══ -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -131,9 +129,9 @@
       [data-animate].animated{opacity:1;transform:none}
       .gradient-text{background:linear-gradient(135deg,#6366f1,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     </style>
-    <!-- Preload + async load full CSS -->
-    <link rel="preload" href="assets/css/style.css" as="style" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Full CSS — loaded async after critical inline CSS renders the page -->
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="assets/css/style.css" /></noscript>
     <!-- JSON-LD: WebSite + SearchAction -->
     <script type="application/ld+json">
       {
